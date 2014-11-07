@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
 #use spree multicurrency
 gem 'spree_multi_currency', :github => "spree/spree_multi_currency", branch: 'master'
 #use i18n for internationalization
-#gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-4-stable'
+gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-4-stable'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
