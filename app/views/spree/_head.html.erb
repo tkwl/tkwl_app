@@ -1,0 +1,24 @@
+<meta charset="utf-8">
+<title><%= title %></title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<%== meta_data_tags %>
+<%= canonical_tag(current_store.url) %>
+<%= favicon_link_tag 'favicon.ico' %>
+<%= stylesheet_link_tag 'spree/frontend/all', :media => 'screen' %> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<%= csrf_meta_tags %>
+<%= javascript_include_tag 'spree/frontend/all' %>
+
+<meta property="og:url" content="{{ canonical_url }}"/>
+  <meta property="og:title" content="{{ page_title }}"/>
+  <meta property="og:description" content="{{ page_description }}"/>
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0210/5956/files/tokyowheel-facebook-profile-image.jpg?28561"/>
+  
+<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
+<![endif]-->
+<%= yield :head %>
