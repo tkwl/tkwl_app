@@ -18,6 +18,13 @@ GIT
       spree_core (~> 2.4.0.beta)
 
 GIT
+  remote: git://github.com/tkwl/spree_tkwl_theme.git
+  revision: eefbe35f130bfa6689abc4b2a79c905229f53d19
+  specs:
+    spree_tkwl_theme (2.4.0)
+      spree_core (~> 2.4.0.rc3)
+
+GIT
   remote: https://github.com/spree/spree.git
   revision: c20818c0ff85f584920959b76590103383a7729c
   branch: 2-4-stable
@@ -344,6 +351,7 @@ DEPENDENCIES
   spree_gateway!
   spree_i18n!
   spree_multi_currency!
+  spree_tkwl_theme!
   spring
   sqlite3
   turbolinks
