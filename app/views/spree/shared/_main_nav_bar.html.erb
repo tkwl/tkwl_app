@@ -1,0 +1,304 @@
+<nav>
+<div id='header-bar' class="well well-sm no-margin header-bar-well">
+	<div class="container">
+      <div class="">
+  		<div class="col-sm-3">
+          <i class="fa fa-truck fa-lg text-muted"></i><a href="http://www.tokyowheel.com/pages/information#shipping-delivery"><strong> FREE Shipping Worldwide</strong></a>
+    	</div>
+        <div class="col-sm-3">
+          <i class="fa fa-bookmark fa-lg text-muted"></i> <a href="http://www.tokyowheel.com/pages/information#shipping-delivery"><strong> Guaranteed No Customs Taxes</strong></a>
+    	</div>
+        <div class="col-sm-3">
+          <i class="fa fa-certificate fa-lg text-muted"></i> <a href="http://www.tokyowheel.com/pages/information#guarantee"><strong> Free Returns + 110% Moneyback</strong></a>
+    	</div>
+        <div class="col-sm-3">
+        <i class="fa fa-calendar fa-lg text-muted"></i> <a href="http://www.tokyowheel.com/pages/information#guarantee"><strong> 365 Day Test Ride</strong></a>  
+        </div>
+        
+        
+      </div>
+    </div>
+</div>
+<div role="navigation" class="navbar navbar-default no-margin sm-navbar navbar-square hidden-xs" id='sub-nav'>        
+              <div class="container">
+                <div class='row'>
+                  <div class="navbar-top-collapse navbar-collapse collapse">
+                     <ul class="nav navbar-nav navbar-left top">
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><small><i class="fa fa-phone"></i> Call Us 1-877-549-2069 <span class="caret"></span></small></a>
+            				<ul class="dropdown-menu">
+<li><a href="tel:+810345895010"><strong><img src="{{'jp.gif' | asset_url }}" alt="Japan" class=""> Tokyo, Japan  </strong> +81 03 4589 5010</a></li>
+<li><a href="tel:+18775492069"><strong><img src="{{'us.gif' | asset_url }}" alt="USA" class=""> United States <small class='text-muted'>(Toll Free)</small>  </strong> +1 (877) 549-2069</a></li>
+<li><a href="tel:+18775492069"><strong><img src="{{'ca.gif' | asset_url }}" alt="Canada" class=""> Canada <small class='text-muted'>(Toll Free)</small>  </strong> +1 (877) 549-2069</a></li>
+<li><a href="tel:+61388997533"><strong><img src="{{'au.gif' | asset_url }}" alt="Australia" class=""> Australia  </strong> +61 3 8899 7533</a></li>
+<li><a href="tel:+448008085791"><strong><img src="{{'gb.gif' | asset_url }}" alt="United Kingdom" class=""> United Kingdom <small class='text-muted'>(Toll Free)</small>  </strong> +44 800 808 5791</a></li>
+<li><a href="tel:+43720884764"><strong><img src="{{'at.gif' | asset_url }}" alt="Austria" class=""> Austria  </strong> +43 720 884 764</a></li>
+<li><a href="tel:+3278481705"><strong><img src="{{'be.gif' | asset_url }}" alt="Belgium" class=""> Belgium  </strong> +32 78 481 705</a></li>
+<li><a href="tel:+4589883294"><strong><img src="{{'dk.gif' | asset_url }}" alt="Denmark" class=""> Denmark  </strong> +45 89 88 32 94</a></li>
+<li><a href="tel:+358753251385"><strong><img src="{{'fi.gif' | asset_url }}" alt="Finland" class=""> Finland  </strong> +358 75 325 1385</a></li>
+<li><a href="tel:+33975189179"><strong><img src="{{'fr.gif' | asset_url }}" alt="France" class=""> France  </strong> +33 9 75 18 91 79</a></li>
+<li><a href="tel:+85258084534"><strong><img src="{{'hk.gif' | asset_url }}" alt="Hong Kong" class=""> Hong Kong  </strong> +852 58084534</a></li>
+<li><a href="tel:+353766805787"><strong><img src="{{'ie.gif' | asset_url }}" alt="Ireland" class=""> Ireland  </strong> +353 76 680 5787</a></li>
+<li><a href="tel:+390811892137"><strong><img src="{{'it.gif' | asset_url }}" alt="Italy" class=""> Italy  </strong> +39 081 189 2137</a></li>
+<li><a href="tel:+31858884391"><strong><img src="{{'nl.gif' | asset_url }}" alt="Netherlands" class=""> Netherlands  </strong> +31 85 888 4391</a></li>
+<li><a href="tel:+6478083142"><strong><img src="{{'nz.gif' | asset_url }}" alt="New Zealand" class=""> New Zealand  </strong> +64 7 808 3142</a></li>
+<li><a href="tel:+48618803256"><strong><img src="{{'pl.gif' | asset_url }}" alt="ydowo, Poland" class=""> Poland  </strong> +48 61 880 32 56</a></li>
+<li><a href="tel:+351308802535"><strong><img src="{{'pt.gif' | asset_url }}" alt="Portugal" class=""> Portugal  </strong> +351 308 802 535</a></li>
+<li><a href="tel:+46108848529"><strong><img src="{{'se.gif' | asset_url }}" alt="Sweden" class=""> Sweden  </strong> +46 10 8848529</a></li>
+            				</ul>
+      					</li>
+                    </ul>
+                      <ul class="nav navbar-nav navbar-right top">
+                       
+                        <li class=""><a href="/pages/contact" class=""><small>Contact</small></a></li>
+                        <li class=""><a href="/account#orders" class=""><small>Track Order</small></a></li>
+                        
+      {% if customer %}
+                        <li class="dropdown ">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><small>{{ customer.first_name }} {{ customer.last_name }} <span class="caret"></span></small></a>
+            				<ul class="dropdown-menu">
+                              {% if template contains 'account' %}
+                              {% else %}
+                              <li><a href="/account">Dashboard</a></li>
+                              <li class=""><a href="/account" class="">Ambassador</a></li>
+                              {% if customer.orders.size != 0 %}
+                              <li class=""><a href="/account#orders" class="">Orders</a></li>
+                              <li class=""><a href="/account#tax" class="">Customs Tax</a></li>
+                              <li class=""><a href="/account#warranty" class="">Warranty</a></li>
+                              <li class=""><a href="/account#return" class="">Returns & Exchanges</a></li>
+                              {% endif %}
+                              {% endif %}
+                              
+                              <li>{{ 'Log out' | customer_logout_link }}</li>
+                          </ul>
+                        </li>
+  						  {% else %}
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><small>Account <span class="caret"></span></small></a>
+            				<ul class="dropdown-menu">
+                              <li><a href="http://www.tokyowheel.com/account/login">Sign In</a></li>
+                               <li><a href="http://www.tokyowheel.com/account/register">Create an Account</a></li>
+                          </ul>
+                        </li>
+  					     {% endif %}
+      
+      
+       <li>
+        {% include 'currency-switcher' %}
+      </li> 
+                        
+        </ul>
+                  </div><!--/.nav-collapse -->
+                </div><!-- row -->
+              </div>  <!-- container -->
+</div><!-- navbar static top -->
+
+          <div role="navigation" class="navbar-main navbar-default navbar-static-top" id='main-nav'>
+              <div class="container">
+                  <div class="navbar-header hidden-sm">
+                    <a class="navbar-brand slim hidden-xs" href="/"><img src="{{ 'logo-file.png' | asset_url }}" alt="{{ shop.name }}"></a>
+                    <a class="navbar-brand visible-xs" href="/"><img src="{{ 'logo-file.png' | asset_url }}" alt="{{ shop.name }}"></a>  
+                   
+                    {% comment %}{% unless template contains 'cart' %}
+                     <div class='visible-xs pull-right navbar-cart'>
+            			<a href="/cart" class="btn btn-success navbar-btn" >
+              				<i class="fa fa-shopping-cart fa-lg"></i> <span class="sr-only">Shopping Cart</span> {% if cart.item_count != 0 %}<span class='badge'>{{ cart.item_count }}</span>{% endif %}
+            			</a>
+         			</div>
+                 
+                    {% endunless %}{% endcomment %}
+                    
+                    
+                    
+                    
+                    
+                    <button type="button" class="navbar-toggle pull-right " data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                  </div><!-- navbar header -->
+                
+                
+                <div class="navbar-header col-sm-12 visible-sm">
+                    
+                    <a class="navbar-brand col-sm-12 text-center" href="/"><img src="{{ 'logo-file.png' | asset_url }}" alt="{{ shop.name }}"></a>
+                    
+                  </div><!-- navbar header -->
+                
+                
+                  
+                   <div class="collapse navbar-collapse navbar-ex1-collapse ">
+   
+                     
+                     <ul class="nav navbar-nav">
+      <li class="">
+        <div>
+  <a class='btn {% if cart.item_count == 0 %}btn-primary{% else %}btn-default{% endif %} navbar-btn' href="/pages/wheels" title="Wheels">
+    Shop Wheels
+  </a>
+        </div>
+</li>
+<li class="">
+  <a href="/pages/reviews" title="Reviews">
+    Reviews
+  </a>
+</li>
+<li class="">
+  <a href="/pages/photos" title="Photos">
+    Photos
+  </a>
+</li>
+<li class="">
+  <a href="/pages/information" title="Warranty & FAQ">
+    Warranty & FAQ
+  </a>
+</li>
+<li class="">
+  <a href="/pages/information#shipping-delivery" title="Shipping & Customs Tax">
+    Shipping
+  </a>
+</li>
+<li class="">
+  <a href="/pages/about" title="About Us">
+    About
+  </a>
+</li>
+</li>
+<li class="">
+  <a href="/blogs/a" title="Blog">
+    Blog
+  </a>
+</li>
+     <li class="">
+  <a class=''href="http://forum.tokyowheel.com" title="Forum">
+    Forum
+  </a>
+</li>
+
+    
+
+                        <li class="dropdown visible-xs">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-phone"></i> Call Us 1-877-549-2069 <span class="caret"></span></a>
+            				<ul class="dropdown-menu">
+<li><a href="tel:+810345895010"><strong><img src="{{'jp.gif' | asset_url }}" alt="Japan" class=""> Tokyo, Japan  </strong> +81 03 4589 5010</a></li>
+<li><a href="tel:+18775492069"><strong><img src="{{'us.gif' | asset_url }}" alt="USA" class=""> United States <small class='text-muted'>(Toll Free)</small>  </strong> +1 (877) 549-2069</a></li>
+<li><a href="tel:+18775492069"><strong><img src="{{'ca.gif' | asset_url }}" alt="Canada" class=""> Canada <small class='text-muted'>(Toll Free)</small>  </strong> +1 (877) 549-2069</a></li>
+<li><a href="tel:+61388997533"><strong><img src="{{'au.gif' | asset_url }}" alt="Australia" class=""> Australia  </strong> +61 3 8899 7533</a></li>
+<li><a href="tel:+448008085791"><strong><img src="{{'gb.gif' | asset_url }}" alt="United Kingdom" class=""> United Kingdom <small class='text-muted'>(Toll Free)</small>  </strong> +44 800 808 5791</a></li>
+<li><a href="tel:+43720884764"><strong><img src="{{'at.gif' | asset_url }}" alt="Austria" class=""> Austria  </strong> +43 720 884 764</a></li>
+<li><a href="tel:+3278481705"><strong><img src="{{'be.gif' | asset_url }}" alt="Belgium" class=""> Belgium  </strong> +32 78 481 705</a></li>
+<li><a href="tel:+4589883294"><strong><img src="{{'dk.gif' | asset_url }}" alt="Denmark" class=""> Denmark  </strong> +45 89 88 32 94</a></li>
+<li><a href="tel:+358753251385"><strong><img src="{{'fi.gif' | asset_url }}" alt="Finland" class=""> Finland  </strong> +358 75 325 1385</a></li>
+<li><a href="tel:+33975189179"><strong><img src="{{'fr.gif' | asset_url }}" alt="France" class=""> France  </strong> +33 9 75 18 91 79</a></li>
+<li><a href="tel:+85258084534"><strong><img src="{{'hk.gif' | asset_url }}" alt="Hong Kong" class=""> Hong Kong  </strong> +852 58084534</a></li>
+<li><a href="tel:+353766805787"><strong><img src="{{'ie.gif' | asset_url }}" alt="Ireland" class=""> Ireland  </strong> +353 76 680 5787</a></li>
+<li><a href="tel:+390811892137"><strong><img src="{{'it.gif' | asset_url }}" alt="Italy" class=""> Italy  </strong> +39 081 189 2137</a></li>
+<li><a href="tel:+31858884391"><strong><img src="{{'nl.gif' | asset_url }}" alt="Netherlands" class=""> Netherlands  </strong> +31 85 888 4391</a></li>
+<li><a href="tel:+6478083142"><strong><img src="{{'nz.gif' | asset_url }}" alt="New Zealand" class=""> New Zealand  </strong> +64 7 808 3142</a></li>
+<li><a href="tel:+48618803256"><strong><img src="{{'pl.gif' | asset_url }}" alt="ydowo, Poland" class=""> Poland  </strong> +48 61 880 32 56</a></li>
+<li><a href="tel:+351308802535"><strong><img src="{{'pt.gif' | asset_url }}" alt="Portugal" class=""> Portugal  </strong> +351 308 802 535</a></li>
+<li><a href="tel:+46108848529"><strong><img src="{{'se.gif' | asset_url }}" alt="Sweden" class=""> Sweden  </strong> +46 10 8848529</a></li>
+            				</ul>
+      					</li>
+
+                        <li class="visible-xs"><a href="/account" class="">Track Order</a></li>
+                        
+      {% if customer %}
+                        <li class="dropdown visible-xs">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span>{{ customer.first_name }} {{ customer.last_name }} <span class="caret"></span></span></a>
+            				<ul class="dropdown-menu">
+                              {% if template contains 'account' %}
+                              {% else %}
+                              <li><a href="/account">Dashboard</a></li>
+                              <li class=""><a href="/account" class="">Ambassador</a></li>
+                              {% if customer.orders.size != 0 %}
+                              <li class=""><a href="/account#orders" class="">Orders</a></li>
+                              <li class=""><a href="/account#tax" class="">Customs Tax</a></li>
+                              <li class=""><a href="/account#warranty" class="">Warranty</a></li>
+                              <li class=""><a href="/account#return" class="">Returns & Exchanges</a></li>
+                              {% endif %}
+                              {% endif %}
+                              
+                              <li>{{ 'Log out' | customer_logout_link }}</li>
+                          </ul>
+                        </li>
+  						  {% else %}
+                          <li class="dropdown visible-xs">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <span class="caret"></span></a>
+            				<ul class="dropdown-menu">
+                              <li><a href="http://www.tokyowheel.com/account/login">Sign In</a></li>
+                               <li><a href="http://www.tokyowheel.com/account/register">Create an Account</a></li>
+                          </ul>
+                        </li>
+                       {% endif %}
+      
+      
+                       <li class='visible-xs' style='margin-right:15px;margin-bottom:15px;'>
+                         <div class="currency-switcher form-group" stle='height:auto;'>
+  <select id="currencies2" name="currencies" class="form-control">
+  	<option value="{{ shop.currency }}" selected="selected">{{ shop.currency }}</option>
+    <option value="ARS">ARS</option>
+    <option value="ANG">ANG</option>
+    <option value="AUD">AUD</option>
+    <option value="BRL">BRL</option>
+    <option value="CHF">CHF</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="HKD">HKD</option>
+    <option value="JPY">JPY</option>
+    <option value="KRW">KRW</option>
+    <option value="NZD">NZD</option>
+    <option value="PHP">PHP</option>
+    <option value="SGD">SGD</option>
+    <option value="THB">THB</option>
+    <option value="USD">USD</option>
+</select>
+</div>
+      </li> 
+                        
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     
+      {% unless template contains 'cart' %}
+      <li class=''>
+         <div>
+           <a href="/cart" class="btn btn-success navbar-btn" style='margin-right:15px;' >
+              <span><i class="fa fa-shopping-cart fa-lg"></i> {% if cart.item_count != 0 %}<span class='badge'>{{ cart.item_count }}</span>{% endif %}<span class="visible-xs"> Shopping Cart</span></span>
+            </a>
+         </div>
+          </li>
+      {% endunless %}
+      {% comment %} <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="{{'en-flag.png' | asset_url }}" alt="English" class=""> <span class="caret"></span>
+            </a>
+          <ul class="dropdown-menu">
+              <li><a href="http://www.tokyowheel.com"><img src="{{'en-flag.png' | asset_url }}" alt="English" class=""> {% include '__localize' with 'English' %}</a></li>
+				<li><a href="http://www.tokyowheel.jp"><img src="{{'jp-flag.png' | asset_url }}" alt="日本語" class=""> {% include '__localize' with '日本語' %}</a></li>
+            </ul>
+      </li>{% endcomment %}
+      
+    </ul> 
+    
+  </div><!-- /.navbar-collapse --> 
+	</div><!-- navigation -->
+            </div>          
+
+<!-- end new navigation -->
+
+
+</nav>
+<nav class="">
+  <ul id="main-nav-bar" class="inline" data-hook>
+    <li id="home-link" data-hook><%= link_to Spree.t(:home), spree.root_path %></li>
+    <li id="link-to-cart" data-hook>
+      <noscript>
+        <%= link_to Spree.t(:cart), '/cart' %>
+      </noscript>
+      &nbsp;
+    </li>
+    <script>Spree.fetch_cart()</script>
+  </ul>
+</nav>
