@@ -53,9 +53,6 @@ gem 'spring',        group: :development
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
 
-#use amazon sdk for s3 image hosting
-gem 'aws-sdk'
-
 #use spree static content
 #gem 'spree_static_content', github: 'tkwl/spree_static_content', :branch => '2-3-stable'
 gem 'spree', :git => 'https://github.com/spree/spree.git', :branch => '2-4-stable'
