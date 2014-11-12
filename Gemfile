@@ -53,8 +53,10 @@ gem 'spring',        group: :development
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
 
-#use spree static content
-#gem 'spree_static_content', github: 'tkwl/spree_static_content', :branch => '2-3-stable'
+#use multilingual spree static content fork
+
+gem 'spree_static_content', github: 'nunopolonia/spree_static_content', branch: 'master'
+
 gem 'spree', :git => 'https://github.com/spree/spree.git', :branch => '2-4-stable'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
