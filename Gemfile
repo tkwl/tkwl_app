@@ -53,6 +53,9 @@ gem 'spring',        group: :development
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
 
+#use better paypal express
+gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
+
 #use spree_blogging forked from stefansenk, updated gemspec to support spree 2-4-0
 gem 'spree_blogging_spree', github: 'tkwl/spree-blogging-spree'
 
