@@ -53,8 +53,10 @@ gem 'spring',        group: :development
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
 
-#use multilingual spree static content fork
+#use spree reviews
+gem 'spree_reviews', github: 'spree/spree_reviews', branch: 'master'
 
+#use multilingual spree static content fork
 gem 'spree_static_content', github: 'tkwl/spree_static_content', branch: 'master'
 
 gem 'spree', :git => 'https://github.com/spree/spree.git', :branch => '2-4-stable'
