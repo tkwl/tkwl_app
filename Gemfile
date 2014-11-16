@@ -53,6 +53,9 @@ gem 'spring',        group: :development
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
 
+#use spree_blogging forked from stefansenk, updated gemspec to support spree 2-4-0
+gem 'spree_blogging_spree', github: 'tkwl/spree-blogging-spree'
+
 #use multilingual spree static content fork
 
 gem 'spree_static_content', github: 'tkwl/spree_static_content', branch: 'master'
