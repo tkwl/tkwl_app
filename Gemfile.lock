@@ -18,6 +18,14 @@ GIT
       spree_core (~> 2.4.0.beta)
 
 GIT
+  remote: git://github.com/tkwl/spree-blogging-spree.git
+  revision: 67e55d41b4a2fc1e11127a51c1b28813a2da2e0e
+  specs:
+    spree_blogging_spree (2.3.0)
+      acts-as-taggable-on (~> 3.0.2)
+      spree_core (~> 2.4.0.rc3)
+
+GIT
   remote: git://github.com/tkwl/spree_static_content.git
   revision: 394cc45af4dd48621fffc0f653d804d752a5d401
   branch: master
@@ -143,6 +151,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    acts-as-taggable-on (3.0.2)
+      rails (>= 3, < 5)
     acts_as_list (0.3.0)
       activerecord (>= 3.0)
     addressable (2.3.6)
@@ -349,6 +359,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spree!
   spree_auth_devise!
+  spree_blogging_spree!
   spree_gateway!
   spree_i18n!
   spree_multi_currency!

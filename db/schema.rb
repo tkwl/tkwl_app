@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112123238) do
+ActiveRecord::Schema.define(version: 20141116055727) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -89,6 +89,20 @@ ActiveRecord::Schema.define(version: 20141112123238) do
   add_index "spree_assets", ["viewable_id"], name: "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], name: "index_assets_on_viewable_type_and_type"
 
+  create_table "spree_blog_entries", force: true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "permalink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "visible",      default: false
+    t.datetime "published_at"
+    t.text     "summary"
+    t.integer  "author_id"
+  end
+
+  add_index "spree_blog_entries", ["author_id"], name: "index_spree_blog_entries_on_author_id"
+
   create_table "spree_calculators", force: true do |t|
     t.string   "type"
     t.integer  "calculable_id"
@@ -146,6 +160,19 @@ ActiveRecord::Schema.define(version: 20141112123238) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "spree_feedback_reviews", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "review_id",                 null: false
+    t.integer  "rating",     default: 0
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "locale",     default: "en"
+  end
+
+  add_index "spree_feedback_reviews", ["review_id"], name: "index_spree_feedback_reviews_on_review_id"
+  add_index "spree_feedback_reviews", ["user_id"], name: "index_spree_feedback_reviews_on_user_id"
 
   create_table "spree_gateways", force: true do |t|
     t.string   "type"
@@ -480,7 +507,7 @@ ActiveRecord::Schema.define(version: 20141112123238) do
   add_index "spree_product_translations", ["spree_product_id"], name: "index_spree_product_translations_on_spree_product_id"
 
   create_table "spree_products", force: true do |t|
-    t.string   "name",                 default: "",   null: false
+    t.string   "name",                                         default: "",   null: false
     t.text     "description"
     t.datetime "available_on"
     t.datetime "deleted_at"
@@ -491,8 +518,10 @@ ActiveRecord::Schema.define(version: 20141112123238) do
     t.integer  "shipping_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "promotionable",        default: true
+    t.boolean  "promotionable",                                default: true
     t.string   "meta_title"
+    t.decimal  "avg_rating",           precision: 7, scale: 5, default: 0.0,  null: false
+    t.integer  "reviews_count",                                default: 0,    null: false
   end
 
   add_index "spree_products", ["available_on"], name: "index_spree_products_on_available_on"
@@ -728,6 +757,24 @@ ActiveRecord::Schema.define(version: 20141112123238) do
 
   add_index "spree_return_items", ["customer_return_id"], name: "index_return_items_on_customer_return_id"
   add_index "spree_return_items", ["exchange_inventory_unit_id"], name: "index_spree_return_items_on_exchange_inventory_unit_id"
+
+  create_table "spree_reviews", force: true do |t|
+    t.integer  "product_id"
+    t.string   "name"
+    t.string   "location"
+    t.integer  "rating"
+    t.text     "title"
+    t.text     "review"
+    t.boolean  "approved",        default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "ip_address"
+    t.string   "locale",          default: "en"
+    t.boolean  "show_identifier", default: true
+  end
+
+  add_index "spree_reviews", ["show_identifier"], name: "index_spree_reviews_on_show_identifier"
 
   create_table "spree_roles", force: true do |t|
     t.string "name"
@@ -1091,6 +1138,10 @@ ActiveRecord::Schema.define(version: 20141112123238) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.string   "nickname"
+    t.string   "website_url"
+    t.string   "google_plus_url"
+    t.text     "bio_info"
   end
 
   add_index "spree_users", ["deleted_at"], name: "index_spree_users_on_deleted_at"
@@ -1144,5 +1195,23 @@ ActiveRecord::Schema.define(version: 20141112123238) do
   end
 
   add_index "spree_zones", ["default_tax"], name: "index_spree_zones_on_default_tax"
+
+  create_table "taggings", force: true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
+
+  create_table "tags", force: true do |t|
+    t.string "name"
+  end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true
 
 end
