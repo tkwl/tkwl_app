@@ -53,6 +53,9 @@ gem 'spring',        group: :development
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
 
+#use forked spree affiliate
+gem 'spree_reffiliate', github: 'tkwl/spree_reffiliate', branch: 'master'
+
 #use better paypal express
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
 

@@ -35,6 +35,14 @@ GIT
       spree_core (~> 2.4.0.rc3)
 
 GIT
+  remote: git://github.com/tkwl/spree_reffiliate.git
+  revision: efffe7b2d5d39e7ee154382599c762c2be75eb6d
+  branch: master
+  specs:
+    spree_reffiliate (2.3.1)
+      spree_core (~> 2.4.0.rc3)
+
+GIT
   remote: git://github.com/tkwl/spree_static_content.git
   revision: 394cc45af4dd48621fffc0f653d804d752a5d401
   branch: master
@@ -378,6 +386,7 @@ DEPENDENCIES
   spree_i18n!
   spree_multi_currency!
   spree_paypal_express!
+  spree_reffiliate!
   spree_static_content!
   spring
   sqlite3
