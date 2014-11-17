@@ -10,7 +10,7 @@ GIT
 GIT
   remote: git://github.com/spree/spree_i18n.git
   revision: 2e77eb0d4bee0f5a53175aef02010184c69ed672
-  branch: 2-4-stable
+  branch: master
   specs:
     spree_i18n (3.0.0)
       globalize (~> 4.0.2)
@@ -44,8 +44,8 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree.git
-  revision: eaaea6cd21fb5dfbf06a00c871b12934d62ec67e
-  branch: 2-4-stable
+  revision: 6ba4dcad584112402eb44077aff9990c06973722
+  branch: 6ba4dcad584112402eb44077aff9990c06973722
   specs:
     spree (2.4.0.rc4)
       spree_api (= 2.4.0.rc4)

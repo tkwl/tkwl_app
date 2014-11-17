@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.0.0'
 #use spree multicurrency
 gem 'spree_multi_currency', :github => "spree/spree_multi_currency", branch: 'master'
 #use i18n for internationalization
-gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-4-stable'
+gem 'spree_i18n', github: 'spree/spree_i18n', branch: 'master'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -63,6 +63,6 @@ gem 'spree_blogging_spree', github: 'tkwl/spree-blogging-spree'
 
 gem 'spree_static_content', github: 'tkwl/spree_static_content', branch: 'master'
 
-gem 'spree', :git => 'https://github.com/spree/spree.git', :branch => '2-4-stable'
+gem 'spree', :git => 'https://github.com/spree/spree.git', :branch => '6ba4dcad584112402eb44077aff9990c06973722'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
