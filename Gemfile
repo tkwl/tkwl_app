@@ -65,4 +65,4 @@ gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :bran
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
 
 #Use tkwl theme
-gem 'spree_tkwl_theme', :github => 'tkwl/spree_tkwl_theme', branch: 'master'
+#gem 'spree_tkwl_theme', :github => 'tkwl/spree_tkwl_theme', branch: 'master'
