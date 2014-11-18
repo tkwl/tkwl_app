@@ -1,4 +1,15 @@
 GIT
+  remote: git://github.com/AgilTec/spree_variant_options.git
+  revision: 2d09ba3c26712e1df22974f6b3ed360493811f77
+  branch: master
+  specs:
+    spree_variant_options (0.6.0)
+      spree_api (~> 2.4.0.rc3)
+      spree_backend (~> 2.4.0.rc3)
+      spree_core (~> 2.4.0.rc3)
+      spree_frontend (~> 2.4.0.rc3)
+
+GIT
   remote: git://github.com/spree-contrib/better_spree_paypal_express.git
   revision: 2f540c33ea0e85c24e10d03fabbee00b7145a55c
   branch: 2-4-stable
@@ -379,6 +390,7 @@ DEPENDENCIES
   spree_multi_currency!
   spree_paypal_express!
   spree_static_content!
+  spree_variant_options!
   spring
   sqlite3
   turbolinks
