@@ -44,7 +44,7 @@ GIT
 
 GIT
   remote: git://github.com/tkwl/spree_tkwl_theme.git
-  revision: f4dcd3c160ff8108e1253a0b3ee85e422af4ecd3
+  revision: 0117dd0ba4e41d733da56ef1d42a32e7a4ec8800
   branch: master
   specs:
     spree_tkwl_theme (2.4.0)
