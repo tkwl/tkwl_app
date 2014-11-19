@@ -47,8 +47,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-#use the tokyowheel theme
-#gem 'spree_tkwl_theme', :github => 'tkwl/spree_tkwl_theme'
+
 
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
@@ -66,3 +65,6 @@ gem 'spree_static_content', github: 'tkwl/spree_static_content', branch: 'master
 gem 'spree', :git => 'https://github.com/spree/spree.git', :branch => '2-4-stable'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
+
+#use the tokyowheel theme
+gem 'spree_tkwl_theme', :github => 'tkwl/spree_tkwl_theme'
