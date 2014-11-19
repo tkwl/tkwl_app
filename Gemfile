@@ -67,4 +67,4 @@ gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :bran
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
 
 #use the tokyowheel theme
-gem 'spree_tkwl_theme', :path => '../spree_tkwl_theme'
+gem 'spree_tkwl_theme', github: 'tkwl/spree_tkwl_theme'
