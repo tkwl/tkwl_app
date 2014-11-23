@@ -47,6 +47,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#Use Newrelic
+gem 'newrelic_rpm'
 
 
 #use spree multidomain
