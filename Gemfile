@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 #use spree multicurrency
-gem 'spree_multi_currency', :github => "spree/spree_multi_currency", branch: 'master'
+gem 'spree_multi_currency', :github => "tkwl/spree_multi_currency", branch: 'master'
 #use i18n for internationalization
 gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-4-stable'
 
@@ -48,7 +48,7 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 #Use Newrelic
-gem 'newrelic_rpm'
+#gem 'newrelic_rpm'
 
 
 #use spree multidomain
@@ -61,12 +61,12 @@ gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express',
 gem 'spree_blogging_spree', github: 'tkwl/spree-blogging-spree'
 
 #use multilingual spree static content fork
-
 gem 'spree_static_content', github: 'tkwl/spree_static_content', branch: 'master'
 
-gem 'spree', :git => 'https://github.com/spree/spree.git', :branch => '2-4-stable'
-gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-4-stable'
-gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-4-stable'
-
+#use spree price books
+gem 'spree_price_books', github: 'spree-contrib/spree_price_books', branch: '2-4-stable'
+gem 'spree', :git => 'https://github.com/spree/spree.git', branch: '2-4-stable'
+gem 'spree_gateway', :git => 'https://github.com/tkwl/spree_gateway.git', branch: '2-4-stable'
+gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', branch: '2-4-stable'
 #use the tokyowheel theme
 #gem 'spree_tkwl_theme', github: 'tkwl/spree_tkwl_theme'
