@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.6'
+gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
@@ -18,10 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-#use spree multicurrency
-gem 'spree_multi_currency', :github => "tkwl/spree_multi_currency", branch: 'master'
-#use i18n for internationalization
-gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-4-stable'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -53,9 +50,13 @@ gem 'spring',        group: :development
 
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
+#use spree multicurrency
+#gem 'spree_multi_currency', :github => "tkwl/spree_multi_currency", branch: 'master'
+#use i18n for internationalization
+gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-4-stable'
 
 #use better paypal express
-gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express', branch: '2-4-stable'
+gem 'spree_paypal_express', github: 'tkwl/better_spree_paypal_express', branch: 'master'
 
 #use spree_blogging forked from stefansenk, updated gemspec to support spree 2-4-0
 gem 'spree_blogging_spree', github: 'tkwl/spree-blogging-spree'
@@ -65,7 +66,7 @@ gem 'spree_static_content', github: 'tkwl/spree_static_content', branch: 'master
 
 #use spree price books
 gem 'spree_price_books', github: 'spree-contrib/spree_price_books', branch: '2-4-stable'
-gem 'spree', :git => 'https://github.com/spree/spree.git', branch: '2-4-stable'
+gem 'spree', :git => 'https://github.com/spree/spree.git', tag: 'v2.4.1'
 gem 'spree_gateway', :git => 'https://github.com/tkwl/spree_gateway.git', branch: '2-4-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', branch: '2-4-stable'
 #use the tokyowheel theme
