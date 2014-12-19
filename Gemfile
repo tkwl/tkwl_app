@@ -51,7 +51,7 @@ gem 'spring',        group: :development
 #use spree multidomain
 #gem 'spree_multi_domain', git: 'git://github.com/spree/spree-multi-domain.git', :branch => '2-3-stable'
 #use spree multicurrency
-#gem 'spree_multi_currency', :github => "tkwl/spree_multi_currency", branch: 'master'
+gem 'spree_multi_currency', :github => "spree-contrib/spree_multi_currency", branch: '2-4-stable'
 #use i18n for internationalization
 gem 'spree_i18n', github: 'spree/spree_i18n', branch: '2-4-stable'
 
